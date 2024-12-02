@@ -13,13 +13,39 @@
 * Вывести содержимое переменной на экран
 
 """
+def separator(age):
+    if age < 2:
+        return 'У тебя все в переди'
+    elif age < 7:
+        return 'Ты ходишь в садик'
+    elif age < 19:
+        return 'Ты учишься в школе'
+    elif age < 23:
+        return 'Ты учишься в институте'
+    elif age < 65:
+        return 'Ты работаешь'
+    elif age > 150:
+        return 'Ты вампир?'
+    else:
+        return 'Ты все еще работаешь?'
+    
+    
+    return None  
 
 def main():
     """
     Эта функция вызывается автоматически при запуске скрипта в консоли
     В ней надо заменить pass на ваш код
     """
-    pass
+    try:
+        age = int(input('Введите Ваш возраст '))
+        
+    except ValueError:
+        age = int(input('Нужно ввести целое число. Сколько вам полных лет?'))
+
+    interval = separator(age)
+    print(interval)
+   
 
 if __name__ == "__main__":
     main()

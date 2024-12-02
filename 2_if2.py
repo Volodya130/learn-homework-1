@@ -14,13 +14,31 @@
   и выводя на экран результаты
 
 """
+def twolines (line1, line2):
+
+    if isinstance(line1, str) and isinstance(line2, str):
+        if line1 == line2:
+            return 1
+        elif len(line1) > len(line2):
+            return 2
+        elif len(line1) < len(line2):
+            return 3
+        else:
+            return ''
+
+    else:
+        return 0  
 
 def main():
     """
     Эта функция вызывается автоматически при запуске скрипта в консоли
-    В ней надо заменить pass на ваш код
+    В ней надо заменqить pass на ваш код
     """
-    pass
+    print(twolines('раздватри', 5))
+    print(twolines('раздватри', 'раздватри'))
+    print(twolines('раздватр  и', 'тридва раз'))
+    print(twolines('раздватри', 'тридва раз'))
+    
     
 if __name__ == "__main__":
     main()
